@@ -25,7 +25,6 @@ else {
 	else {
 
 
-
 		//If query contains an underscore, assume user is searching for usernames
 		if($type == "username") 
 			$usersReturnedQuery = mysqli_query($con, "SELECT * FROM users WHERE username LIKE '$query%' AND user_closed='no' LIMIT 8");
