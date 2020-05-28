@@ -4,7 +4,6 @@
 
 	$timezone = date_default_timezone_set("Australia/Melbourne");
 
-	// remote database
 	$db_host = "localhost"; // Database host
 	$db_user = "root"; // Database user
 	$db_pass = ""; // Database password
