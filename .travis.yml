@@ -3,9 +3,15 @@ language: php
 php:
   - '7.0'
 
-before_script:
-  - composer install --prefer-dist --no-interaction
+env:
+  - MYSQL_HOST=127.0.0.1 MYSQL_USER=root
 
-script: phpunit --configuration phpunit.xml --coverage-text
+services:
+  - mysql
+
+before_script: 
+  - mysql -u root --password="" < Test/socialnet.sql
+
+script: phpunit UserTest.php
 
 dist: trusty
