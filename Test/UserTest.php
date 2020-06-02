@@ -1,7 +1,7 @@
 <?php
 namespace socialnet;
 require dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR .'autoload.php';
-include ("src\includes\classes\User.php");
+include ("src/includes/classes/User.php");
 
 use PHPUnit\Framework\TestCase;
 use User;
