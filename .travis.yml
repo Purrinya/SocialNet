@@ -9,7 +9,7 @@ env:
 services:
   - mysql
 
-before_script: ./Test/socialnet.php
+before_script: ./Test/socialnet.sql
 
 script: phpunit UserTest.php
 
