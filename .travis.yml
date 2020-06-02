@@ -15,7 +15,4 @@ before_install:
   - mysql -e "CREATE DATABASE IF NOT EXISTS $DATABASE_NAME;"
   - mysql -u root --password="" $DATABASE_NAME < Test/socialnet.sql
 
-
-script: phpunit UserTest.php
-
 dist: trusty
