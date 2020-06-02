@@ -16,6 +16,6 @@ before_install:
   - mysql -u root --password="" $DATABASE_NAME < Test/socialnet.sql
 
 
-script: ./phpunit Test/UserTest.php
+script: phpunit ./Test/UserTest.php
 
 dist: trusty
