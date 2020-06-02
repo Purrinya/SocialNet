@@ -4,12 +4,17 @@ php:
   - '7.0'
 
 env:
-  - MYSQL_HOST=127.0.0.1 MYSQL_USER=root
+  global:
+    - DATABASE_NAME=socialnet
+    - DATABASE_URL=mysql://root@localhost/$DATABASE_NAME
 
 services:
   - mysql
 
-before_script: ./Test/socialnet.sql
+before_install:
+  - mysql -e "CREATE DATABASE IF NOT EXISTS $DATABASE_NAME;"
+  - mysql -u root --password="" $DATABASE_NAME < Test/socialnet.sql
+
 
 script: phpunit UserTest.php
 
