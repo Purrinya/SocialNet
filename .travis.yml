@@ -9,8 +9,7 @@ env:
 services:
   - mysql
 
-before_script: 
-  - mysql -u root --password="" < Test/socialnet.sql
+before_script: ./Test/socialnet.php
 
 script: phpunit UserTest.php
 
